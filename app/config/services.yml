@@ -7,3 +7,18 @@ services:
 #    service_name:
 #        class: AppBundle\Directory\ClassName
 #        arguments: ["@another_service_name", "plain_value", "%parameter_name%"]
+  app.admin.blog.category:
+          class: AppBundle\Admin\CategoryAdmin
+          arguments: [~, AppBundle\Entity\Category, ~]
+          tags:
+              - { name: sonata.admin, manager_type: orm, label: Category }
+  app.admin.blog.blog_post:
+          class: AppBundle\Admin\BlogPostAdmin
+          arguments: [~, AppBundle\Entity\BlogPost, ~]
+          tags:
+              - { name: sonata.admin, manager_type: orm, label: Blog post }
+  app.admin.films.film:
+          class: AppBundle\Admin\FilmAdmin
+          arguments: [~, AppBundle\Entity\Film, ~]
+          tags:
+              - { name: sonata.admin, manager_type: orm, label: Film }

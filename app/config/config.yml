@@ -10,7 +10,7 @@ parameters:
 
 framework:
     #esi:             ~
-    #translator:      { fallbacks: ["%locale%"] }
+    translator:      { fallbacks: ["%locale%"] }
     secret:          "%secret%"
     router:
         resource: "%kernel.root_dir%/config/routing.yml"
@@ -65,3 +65,26 @@ swiftmailer:
     username:  "%mailer_user%"
     password:  "%mailer_password%"
     spool:     { type: memory }
+#sonata
+sonata_admin:
+  title: 'Cinewax'
+  title_logo: 'medias/cinewax.png'
+  dashboard:
+          groups:
+              app.admin.group.blog:
+                  label: 'Blog'
+                  label_catalogue: AppBundle
+                  items:
+                      - app.admin.blog.blog_post
+                      - app.admin.blog.category
+              app.admin.group.films:
+                  label: 'Film database'
+                  label_catalogue: AppBundle
+                  items:
+                      - app.admin.films.film
+sonata_block:
+    default_contexts: [cms]
+    blocks:
+        # enable the SonataAdminBundle block
+        sonata.admin.block.admin_list:
+            contexts: [admin]
