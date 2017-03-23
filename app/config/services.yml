@@ -22,3 +22,9 @@ services:
           arguments: [~, AppBundle\Entity\Film, ~]
           tags:
               - { name: sonata.admin, manager_type: orm, label: Film }
+  #Blocks Admin panel
+  sonata.block.service.stat:
+          class: AppBundle\Block\StatBlockService
+          arguments: [ "sonata.block.service.stat", @templating, @sonata.admin.pool, @doctrine.orm.entity_manager, @security.context]
+          tags:
+              - { name: sonata.block }

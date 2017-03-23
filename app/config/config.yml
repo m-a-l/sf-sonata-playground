@@ -86,9 +86,17 @@ sonata_user:
     manager_type: orm
 #sonata admin bundle
 sonata_admin:
-  title: 'Cinewax'
+  title: 'Film DB'
   title_logo: 'medias/cinewax.png'
   dashboard:
+          blocks:
+              -
+                  position: right
+                  type: sonata.admin.block.admin_list
+              -
+                  position: left
+                  class: col-md-12
+                  type: sonata.block.service.stat
           groups:
               app.admin.group.blog:
                   label: 'Blog'
@@ -113,3 +121,8 @@ sonata_block:
             contexts: [admin]
         sonata.admin.block.search_result:
             contexts: [admin]
+        sonata.block.service.text:
+        sonata.block.service.rss:
+        sonata.block.service.film:
+        #custom block
+        sonata.block.service.stat: ~

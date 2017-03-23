@@ -47,7 +47,7 @@ class FilmAdmin extends Admin
     public function toString($object)
     {
         return $object instanceof Film
-            ? $object->getName()
+            ? $object->getTitle()
             : 'Film';
     }
 }

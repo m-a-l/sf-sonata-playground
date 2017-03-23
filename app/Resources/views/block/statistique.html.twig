@@ -1,0 +1,18 @@
+{% extends sonata_block.templates.block_base %}
+
+{% block block %}
+    <!-- small box -->
+    <div class="small-box bg-green">
+        <div class="inner">
+            <h3>{{ count }}</h3>
+
+            <p class="sonata-feed-title">{{ settings.title }}</p>
+        </div>
+        <div class="icon">
+            <i class="fa fa-film"></i>
+        </div>
+    </div>
+
+{{ sonata_block_include_stylesheets('screen', app.request.basePath) }}
+{{ sonata_block_include_javascripts('screen', app.request.basePath) }}
+{% endblock %}
