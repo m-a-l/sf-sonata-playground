@@ -6,7 +6,6 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Bundle\FrameworkBundle\Templating\EngineInterface;
 
 use Sonata\AdminBundle\Form\FormMapper;
-Use Sonata\CoreBundle\Validator\ErrorElement;
 use Sonata\AdminBundle\Admin\Pool;
 
 use Sonata\BlockBundle\Model\BlockInterface;
@@ -14,8 +13,6 @@ use Sonata\BlockBundle\Block\BaseBlockService;
 use Symfony\Component\Security\Core\SecurityContextInterface;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 use Doctrine\ORM\EntityManager;
-use Symfony\Component\VarDumper\VarDumper;
-
 
 /**
  * Class StatBlockService

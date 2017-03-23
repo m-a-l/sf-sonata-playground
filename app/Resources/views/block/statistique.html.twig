@@ -11,8 +11,11 @@
         <div class="icon">
             <i class="fa fa-film"></i>
         </div>
+        <a href="{{ path('admin_app_film_list') }}" class="small-box-footer">
+            Voir plus <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
+        </a>
     </div>
 
-{{ sonata_block_include_stylesheets('screen', app.request.basePath) }}
-{{ sonata_block_include_javascripts('screen', app.request.basePath) }}
+    {{ sonata_block_include_stylesheets('screen', app.request.basePath) }}
+    {{ sonata_block_include_javascripts('screen', app.request.basePath) }}
 {% endblock %}
